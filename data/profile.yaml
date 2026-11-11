@@ -19,8 +19,8 @@ short_bio: >-
 headshot: "static/headshot.jpg"
 links:
   - {label: "CV (PDF)", url: "cv.pdf"}
-  - {label: "Google Scholar", url: "https://scholar.google.com/citations?user=lQmbCsUAAAAJ&hl=en"}
   - {label: "Brookings profile", url: "https://www.brookings.edu/people/elena-spatoulas-patel/"}
+  - {label: "Google Scholar", url: "https://scholar.google.com/citations?user=lQmbCsUAAAAJ&hl=en"}
 # Email is split so it never appears whole in the page source; static/site.js joins it into a link.
 contact:
   user: epatel
