@@ -1,0 +1,43 @@
+# Testimony, government service, and advisory roles (Policy & Government page).
+testimony:
+  - title: "The Postal Service's financial condition is a business-model problem: Recommendations to put universal service on a sustainable footing"
+    body: "Written testimony submitted for the record, House Committee on Oversight and Government Reform, Subcommittee on Government Operations"
+    date: "2026-06-04"
+    url: "https://www.congress.gov/119/meeting/house/119354/documents/HHRG-119-GO24-20260604-SD009.pdf"
+    also: [{label: "Brookings version", url: "https://www.brookings.edu/articles/usps-financial-condition-universal-service/"}]
+    topics: [postal]
+  - title: "The Route Forward for the U.S. Postal Service: A View from Stakeholders"
+    body: "Hearing witness, House Committee on Oversight and Government Reform"
+    date: "2025-06-24"
+    url: "https://oversight.house.gov/wp-content/uploads/2025/06/Patel-Written-Testimony.pdf"
+    also: [{label: "Hearing video", url: "https://www.youtube.com/watch?v=mgVT5_2Fx7M"}]
+    topics: [postal]
+
+service:
+  - agency: "Council of Economic Advisers"
+    role: "Senior Public Finance Economist, Executive Office of the President, 2023–2024"
+    items:
+      - {title: "Aligning the International Tax System with a Globalized Economy", note: "Chapter 3, Economic Report of the President", date: "2025", url: "https://bidenwhitehouse.archives.gov/wp-content/uploads/2025/01/ERP-2025.pdf", topics: [tax]}
+      - {title: "Increasing the Supply of Affordable Housing: Economic Insights and Federal Policy Solutions", note: "Chapter 4, Economic Report of the President", date: "2024", url: "https://bidenwhitehouse.archives.gov/wp-content/uploads/2024/03/ERP-2024.pdf", topics: [housing]}
+      - {title: "Tariffs as a Major Source of Revenue: Implications for Growth", note: "CEA written materials", date: "2024-07-12", url: "https://bidenwhitehouse.archives.gov/cea/written-materials/2024/07/12/tariffs-as-a-major-revenue-source-implications-for-distribution-and-growth/", topics: [tax]}
+      - {title: "Empowering the IRS: Understanding the Full Potential of the Inflation Reduction Act's Historic Investment in the Internal Revenue Service", note: "CEA written materials", date: "2024-02-08", url: "https://bidenwhitehouse.archives.gov/cea/written-materials/2024/02/08/empowering-the-irs-understanding-the-full-potential-of-the-inflation-reduction-acts-historic-investment-in-the-internal-revenue-service/", topics: [tax]}
+      - {title: "Advancing the Frontiers of Benefit-Cost Analysis: Federal Priorities and Directions for Future Research", note: "Subcommittee on Frontiers of Benefit-Cost Analysis", date: "2023-12", url: "https://bidenwhitehouse.archives.gov/wp-content/uploads/2023/12/FINAL-SFBCA-Annual-Report-2023.pdf", topics: [tax]}
+      - {title: "Commercial-to-Residential Conversion: Addressing Office Vacancies", note: "CEA written materials", date: "2023-10-27", url: "https://bidenwhitehouse.archives.gov/cea/written-materials/2023/10/27/commercial-to-residential-conversion-addressing-office-vacancies/", topics: [housing]}
+  - agency: "U.S. Department of the Treasury"
+    role: "Financial Economist, Office of Tax Analysis, 2012–2018"
+    items:
+      - {title: "The President's Framework for Business Tax Reform: An Update", note: "U.S. Department of the Treasury", date: "2016", url: "https://home.treasury.gov/system/files/131/The-Presidents-Framework-for-Business-Tax-Reform-An-Update-04-04-2016.pdf", topics: [tax]}
+  - agency: "Postal Regulatory Commission"
+    role: "Economist, Office of Accountability and Compliance, 2011–2012; Economic Consultant, 2021"
+    items: []
+
+advisory:
+  - {role: "Editor, National Tax Journal", years: "2026–"}
+  - {role: "Utah Economic Impact Collaborative, Utah Governor's Office of Management and Budget", years: "2024–"}
+  - {role: "Tax Gap Estimation Expert Panel, IRS", years: "2024–"}
+  - {role: "Expert Advisory Committee, Canadian Tax Observatory", years: "2024–"}
+  - {role: "IRS Statistics of Income Consultants Panel", years: "2020–"}
+  - {role: "External Senior Economist, Alterra Property Group", years: "2023–"}
+  - {role: "Utah Economic Council", years: "2025"}
+  - {role: "Public Finance Council and Faculty Advisor, Kem C. Gardner Policy Institute", years: "2022–2025"}
+  - {role: "Board of Directors, National Tax Association", years: "2019–2022"}

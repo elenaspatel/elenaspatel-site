@@ -1,0 +1,14 @@
+# Teaching and advising (the academic footprint).
+courses:
+  - school: "University of Utah, David Eccles School of Business"
+    courses: ["Business Econometrics I (undergraduate)", "Econometrics II (doctoral)"]
+  - school: "The George Washington University, Department of Economics"
+    courses: ["Introduction to Econometrics (undergraduate)", "Econometrics (master's)", "Applied Industrial Organization (master's)"]
+  - school: "University of Michigan"
+    courses: ["Introduction to Microeconomics (undergraduate)"]
+
+students:
+  - {name: "Yuchen Zhang", field: "Finance", year: "2025"}
+  - {name: "Amy Cyr", field: "Finance", year: "2025"}
+  - {name: "Huayi Tang", field: "Finance", year: "2023"}
+  - {name: "Mansi Wadhwa", field: "Public Policy", year: "2023"}

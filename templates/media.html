@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% from "macros.html" import email %}
+{% block title %}Media · {{ profile.name }}{% endblock %}
+{% macro mrow(m) -%}
+<li class="row" data-topics="{{ (m.topics or [])|join(' ') }}" data-type="{{ m.kind|lower|replace(' ', '-') }}">
+  <span class="row-type">{{ m.kind }}</span>
+  <span class="row-body">
+    <span class="tag">{{ m.outlet }} · {{ m.date|nice_date }}</span>
+    {% if m.url %}<a class="entry-title" href="{{ m.url }}">{{ m.title }}</a>{% else %}<span class="entry-title">{{ m.title }}</span>{% endif %}
+  </span>
+</li>
+{%- endmacro %}
+{% block content %}
+<section class="page-head">
+  <h1 class="display">Media</h1>
+  <p class="lede">Interviews, podcasts, and coverage of my research. For interview requests, email {{ email(profile.contact) }}.</p>
+</section>
+
+<section class="findings" aria-labelledby="selected">
+  <h2 id="selected">Selected coverage</h2>
+  <ul class="selected">
+    {% for m in featured %}<li><span class="tag">{{ m.outlet }} · {{ m.date|nice_date(false) }}</span>{% if m.url %}<a href="{{ m.url }}">{{ m.title }}</a>{% else %}{{ m.title }}{% endif %}</li>{% endfor %}
+  </ul>
+</section>
+
+<section class="filters" aria-label="Filter coverage" data-filter-for="media-list" hidden>
+  <div class="filter-row" role="group" aria-label="Topic">
+    <span class="filter-label">Topic</span>
+    <button type="button" class="pill" data-filter="topic" data-value="all" aria-pressed="true">All</button>
+    {% for a in areas %}<button type="button" class="pill" data-filter="topic" data-value="{{ a.key }}" aria-pressed="false">{{ a.title }}</button>{% endfor %}
+  </div>
+  <div class="filter-row" role="group" aria-label="Type">
+    <span class="filter-label">Type</span>
+    {% for v, l in [("all","All"),("quoted","Quoted"),("interview","Interviews"),("podcast","Podcasts"),("radio","Radio"),("tv","TV and video"),("research-featured","Research featured")] %}
+    <button type="button" class="pill" data-filter="type" data-value="{{ v }}" aria-pressed="{{ 'true' if v == 'all' else 'false' }}">{{ l }}</button>
+    {% endfor %}
+  </div>
+  <p class="count" aria-live="polite"></p>
+</section>
+
+<div id="media-list" class="filtered">
+  {% for y in recent %}
+  <section class="year" aria-label="{{ y.year }}"><h2 class="year-head">{{ y.year }}</h2><ol class="rows">{% for m in y.rows %}{{ mrow(m) }}{% endfor %}</ol></section>
+  {% endfor %}
+  {% if older %}
+  <details class="older">
+    <summary>Earlier years</summary>
+    {% for y in older %}
+    <section class="year" aria-label="{{ y.year }}"><h2 class="year-head">{{ y.year }}</h2><ol class="rows">{% for m in y.rows %}{{ mrow(m) }}{% endfor %}</ol></section>
+    {% endfor %}
+  </details>
+  {% endif %}
+  <p class="empty" hidden>Nothing matches those filters.</p>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ base }}static/filter.js"></script>{% endblock %}

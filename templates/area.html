@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% from "macros.html" import paper, piece, hit %}
+{% block title %}{{ area.title }} · {{ profile.name }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <p class="crumb"><a href="{{ base }}research/index.html">Research</a> / {{ area.title }}</p>
+  <h1 class="display">{{ area.title }}</h1>
+  <p class="lede">{{ area.intro }}</p>
+  <nav class="area-switch" aria-label="Other research areas">
+    {% for a in areas if a.key != area.key %}<a href="{{ a.key }}.html">{{ a.title }}</a>{% endfor %}
+  </nav>
+</section>
+
+{% if area.findings %}
+<section class="findings" aria-labelledby="findings">
+  <h2 id="findings">Key findings</h2>
+  <ul>{% for f in area.findings %}<li>{{ f.text }} {% if f.url %}<a href="{{ f.url }}">Read more</a>{% endif %}</li>{% endfor %}</ul>
+</section>
+{% endif %}
+
+{% macro academic_sec() %}{% if academic or working %}
+    <section aria-labelledby="academic">
+      <h2 id="academic">Academic research</h2>
+      <ol class="entries">{% for p in academic %}{{ paper(p) }}{% endfor %}{% for p in working %}{{ paper(p) }}{% endfor %}</ol>
+      {% if academic_total > academic|length %}<p><a class="more" href="{{ base }}publications.html?topic={{ area.key }}">All {{ academic_total }} papers →</a></p>{% endif %}
+    </section>{% endif %}{% endmacro %}
+{% macro policy_sec() %}{% if policy %}
+    <section aria-labelledby="policy">
+      <h2 id="policy">Policy research and commentary</h2>
+      <ol class="entries">{% for p in policy %}{{ piece(p) }}{% endfor %}</ol>
+      {% if policy_total > policy|length %}<p><a class="more" href="{{ base }}publications.html?topic={{ area.key }}">All {{ policy_total }} policy pieces →</a></p>{% endif %}
+    </section>{% endif %}{% endmacro %}
+{% macro testimony_sec() %}{% if testimony %}
+    <section aria-labelledby="testimony">
+      <h2 id="testimony">Testimony</h2>
+      <ol class="entries">{% for t in testimony %}<li class="entry compact"><span class="tag">{{ t.date|nice_date }}</span><a href="{{ t.url }}">{{ t.title }}</a></li>{% endfor %}</ol>
+    </section>{% endif %}{% endmacro %}
+{% macro gov_sec() %}{% if govitems %}
+    <section aria-labelledby="gov">
+      <h2 id="gov">In government</h2>
+      <ol class="entries">{% for i in govitems %}<li class="entry compact"><span class="tag">{{ i.date|nice_date(false) }}</span><a href="{{ i.url }}">{{ i.title }}</a><br><span class="meta">{{ i.note }}</span></li>{% endfor %}</ol>
+    </section>{% endif %}{% endmacro %}
+{% macro news_sec() %}{% if media %}
+    <section aria-labelledby="news">
+      <h2 id="news">In the news</h2>
+      <ol class="entries">{% for m in media %}{{ hit(m) }}{% endfor %}</ol>
+      {% if media_total > media|length %}<p><a class="more" href="{{ base }}media.html?topic={{ area.key }}">All coverage →</a></p>{% endif %}
+    </section>{% endif %}{% endmacro %}
+
+{# Policy and academic side by side (same default length), then testimony / government / news in a row below. On phones everything stacks in that order. #}
+<div class="pair">
+  <div>{{ policy_sec() }}</div>
+  <div>{{ academic_sec() }}</div>
+</div>
+<div class="trio">
+  {{ testimony_sec() }}{{ gov_sec() }}{{ news_sec() }}
+</div>
+{% endblock %}

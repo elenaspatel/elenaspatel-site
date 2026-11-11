@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Research · {{ profile.name }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1 class="display">Research</h1>
+  <p class="lede">My research asks how tax systems, social insurance, and public institutions shape the decisions of firms, workers, and families.</p>
+</section>
+<ol class="area-list">
+  {% for a in areas %}
+  <li>
+    <a class="area-title" href="{{ a.key }}.html">{{ a.title }}</a>
+    <p>{{ a.intro }}</p>
+  </li>
+  {% endfor %}
+</ol>
+{% endblock %}

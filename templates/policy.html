@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% from "macros.html" import email %}
+{% block title %}Policy &amp; Government · {{ profile.name }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1 class="display">Policy &amp; Government</h1>
+  <p class="lede">Congressional testimony, my work inside government at the Council of Economic Advisers, the Treasury, and the Postal Regulatory Commission, and current advisory roles.</p>
+</section>
+
+<section class="band" aria-labelledby="testimony">
+  <h2 id="testimony">Congressional testimony</h2>
+  <ol class="entries">
+    {% for t in gov.testimony %}
+    <li class="entry">
+      <span class="tag">{{ t.date|nice_date }}</span>
+      <a class="entry-title" href="{{ t.url }}">{{ t.title }}</a>
+      <p class="meta">{{ t.body }}</p>
+      {% if t.also %}<p class="chips">{% for l in t.also %}<a class="chip" href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</p>{% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{% for s in gov.service %}
+<section class="band" aria-labelledby="svc-{{ loop.index }}">
+  <h2 id="svc-{{ loop.index }}">{{ s.agency }}</h2>
+  <p class="meta">{{ s.role }}</p>
+  {% if s['items'] %}
+  <ol class="entries">
+    {% for i in s['items'] %}
+    <li class="entry"><a class="entry-title" href="{{ i.url }}">{{ i.title }}</a><p class="meta">{{ i.note }} · {{ i.date|nice_date }}</p></li>
+    {% endfor %}
+  </ol>
+  {% endif %}
+</section>
+{% endfor %}
+
+<section class="band two-col" aria-labelledby="advisory">
+  <div>
+    <h2 id="advisory">Advisory and editorial roles</h2>
+    <ul class="plain">{% for a in gov.advisory %}<li>{{ a.role }} <span class="meta">· {{ a.years }}</span></li>{% endfor %}</ul>
+  </div>
+  <div>
+    <h2>Briefings</h2>
+    <p>I brief congressional offices and agency staff on tax, housing, and postal policy. To request a briefing, email {{ email(profile.contact) }}.</p>
+  </div>
+</section>
+{% endblock %}

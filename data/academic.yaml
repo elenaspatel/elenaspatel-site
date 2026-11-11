@@ -1,0 +1,218 @@
+# Peer-reviewed publications, working papers, and works in progress.
+# date: YYYY-MM (issue month) or YYYY. topics: keys from areas.yaml (first one is the primary area).
+# free: one free-version link. also: companion pieces (Brookings brief, etc.).
+published:
+  - title: "The Consequences of Regulating Ownership for Profitable Tax-Exempt Organizations"
+    with: "Brian D. Cadman"
+    venue: "The Accounting Review"
+    cite: "101(6), 2026, 237–266"
+    date: "2026-11"
+    url: "https://publications.aaahq.org/accounting-review/article-abstract/101/6/237/27948/The-Consequences-of-Regulating-Ownership-for"
+    free: {label: "SSRN 4297537", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4297537"}
+    also:
+      - {label: "Brookings brief", title: "The governance costs of hospitals without owners", url: "https://www.brookings.edu/articles/nonprofit-hospital-tax-exemption-governance-oversight/"}
+    topics: [governance, tax]
+
+  - title: "One Big Beautiful Bill? A Preliminary Assessment"
+    with: "William Gale, Benjamin Page, and Joseph Rosenberg"
+    venue: "National Tax Journal"
+    cite: "forthcoming"
+    date: "2026-10"
+    url: "https://www.journals.uchicago.edu/doi/abs/10.1086/743079"
+    free: {label: "Brookings version", url: "https://www.brookings.edu/articles/one-big-beautiful-bill-a-preliminary-assessment/"}
+    topics: [tax]
+
+  - title: "Pediatric Drug Adherence and Parental Attention: Evidence from Comprehensive Claims Data"
+    with: "Joshua Feng and Matthew Higgins"
+    venue: "Health Economics"
+    cite: "35(2), 2026, 346–359"
+    date: "2026-02"
+    url: "https://onlinelibrary.wiley.com/doi/10.1002/hec.70062"
+    free: {label: "NBER w30968", url: "https://www.nber.org/papers/w30968"}
+    also:
+      - {label: "Brookings brief", title: "The fragile routines of pediatric health care: Lessons from asthma during COVID-19", url: "https://www.brookings.edu/articles/the-fragile-routines-of-pediatric-health-care-lessons-from-asthma-during-covid-19/"}
+    topics: [social]
+
+  - title: "Bridging the Gap: How Emergency Paid Leave Addressed Limited Access and Constraints during the Pandemic"
+    with: "Tanya Byker and Kristin Smith"
+    venue: "National Tax Journal"
+    cite: "78(3), 2025, 549–576"
+    date: "2025-09"
+    url: "https://www.journals.uchicago.edu/doi/10.1086/735398"
+    also:
+      - {label: "Equitable Growth brief", title: "Emergency paid leave during the COVID-19 pandemic offered essential protections for U.S. workers", url: "https://equitablegrowth.org/emergency-paid-leave-during-the-covid-19-pandemic-offered-essential-protections-for-u-s-workers/"}
+    topics: [social]
+
+  - title: "The Long-Run Effects of California's Paid Family Leave Act on Women's Careers and Childbearing: New Evidence from a Regression Discontinuity Design and US Tax Data"
+    with: "Martha Bailey, Tanya Byker, and Shanthi Ramnath"
+    venue: "American Economic Journal: Economic Policy"
+    cite: "17(1), 2025, 401–431"
+    date: "2025-02"
+    url: "https://www.aeaweb.org/articles?id=10.1257/pol.20200277"
+    free: {label: "NBER w26416", url: "https://www.nber.org/papers/w26416"}
+    also:
+      - {label: "Cato research brief", title: "The long-run effects of California's paid family leave insurance on women's careers and childbearing", url: "https://www.cato.org/research-briefs-economic-policy/long-run-effects-californias-paid-family-leave-insurance-womens"}
+    topics: [social]
+
+  - title: "Who Cares? Paid Sick Leave Mandates, Caregiving, and Gender"
+    with: "Tanya Byker and Shanthi Ramnath"
+    venue: "National Tax Journal"
+    cite: "76(3), 2023, 649–677"
+    date: "2023-09"
+    url: "https://www.journals.uchicago.edu/doi/10.1086/725876"
+    free: {label: "FRB Working Paper 2023-14", url: ""}
+    topics: [social]
+
+  - title: "Implications of Tax Loss Asymmetry for Owners of S Corporations"
+    with: "Lucas Goodman and Molly Saunders-Scott"
+    venue: "American Economic Journal: Economic Policy"
+    cite: "15(1), 2023, 342–369"
+    date: "2023-02"
+    url: "https://www.aeaweb.org/articles?id=10.1257/pol.20200311"
+    free: {label: "SSRN 3592884", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3592884"}
+    topics: [tax]
+
+  - title: "Taxation, Social Welfare, and Labor Market Frictions"
+    with: "Brendan Epstein, Ryan Nunn, and Musa Orak"
+    venue: "European Economic Review"
+    cite: "151, 2023, 104352"
+    date: "2023-01"
+    url: "https://www.sciencedirect.com/science/article/abs/pii/S001429212200232X"
+    free: {label: "FRB IFDP", url: "https://www.federalreserve.gov/econres/ifdp/taxation-social-welfare-and-labor-market-frictions.htm"}
+    topics: [social, tax]
+
+  - title: "Tax Enforcement and the Intended and Unintended Consequences of Information Disclosure"
+    with: "Laura Konda and Nathan Seegert"
+    venue: "Journal of Public Economics"
+    cite: "212, 2022, 104690"
+    date: "2022-08"
+    url: "https://doi.org/10.1016/j.jpubeco.2022.104690"
+    free: {label: "SSRN 3592114", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3592114"}
+    topics: [tax]
+
+  - title: "How Do Firms Respond to Corporate Taxes?"
+    with: "Jeffrey L. Coles, Nathan Seegert, and Matthew Smith"
+    venue: "Journal of Accounting Research"
+    cite: "60(3), 2022, 965–1006"
+    date: "2022-06"
+    url: "https://onlinelibrary.wiley.com/doi/abs/10.1111/1475-679X.12405"
+    free: {label: "SSRN 3167369", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3167369"}
+    topics: [tax]
+
+  - title: "Investment Differences Between Public and Private Firms: Evidence from US Tax Returns"
+    with: "Naomi Feldman, Laura Kawano, Nirupama Rao, Michael Stevens, and Jesse Edgerton"
+    venue: "Journal of Public Economics"
+    cite: "196, 2021, 104370"
+    date: "2021-04"
+    url: "https://doi.org/10.1016/j.jpubeco.2021.104370"
+    free: {label: "SSRN 3674235", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3674235"}
+    topics: [tax, governance]
+
+  - title: "Does Market Power Encourage or Discourage Investment? Evidence from the Hospital Market"
+    with: "Nathan Seegert"
+    venue: "The Journal of Law and Economics"
+    cite: "63(4), 2020, 667–698"
+    date: "2020-11"
+    url: "https://www.journals.uchicago.edu/doi/full/10.1086/709556"
+    free: {label: "SSRN 2682827", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2682827"}
+    topics: [governance]
+
+  - title: "Marijuana Taxation and Imperfect Competition"
+    with: "Christopher Mace and Nathan Seegert"
+    venue: "National Tax Journal"
+    cite: "73(2), 2020, 545–592"
+    date: "2020-06"
+    url: "https://www.journals.uchicago.edu/doi/abs/10.17310/ntj.2020.2.08"
+    free: {label: "SSRN 3521911", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3521911"}
+    topics: [tax]
+
+  - title: "Examining S-Corporation Losses and How They Are Used"
+    with: "Katherine Lim and Molly Saunders-Scott"
+    venue: "National Tax Journal"
+    cite: "71(4), 2018, 661–686"
+    date: "2018-12"
+    url: "https://doi.org/10.17310/ntj.2018.4.04"
+    topics: [tax]
+
+  - title: "What Would a Cash Flow Tax Look Like? Historical Panel Lessons"
+    with: "John McClelland"
+    venue: "Tax Notes"
+    cite: "154, 2017, 439–450"
+    date: "2017-02"
+    url: "https://www.taxnotes.com/tax-notes-today-federal/corporate-taxation/what-would-cash-flow-tax-look-historical-panel-lessons/2017/02/07/gdcn"
+    free: {label: "OTA Working Paper 116", url: ""}
+    topics: [tax]
+
+  - title: "Estimates of US Postal Price Elasticities of Demand Derived from a Random-Coefficients Discrete-Choice Normal Model"
+    with: "Margaret M. Cigno and Edward S. Pearsall"
+    venue: "Reforming the Postal Sector in the Age of Electronic Competition"
+    cite: "M.A. Crew and P.R. Kleindorfer (eds.), 2012"
+    date: "2012"
+    url: ""
+    topics: [postal]
+
+working:
+  - title: "Medicaid-ing Coverage Volatility for Displaced Workers: Evidence from the 2019 Virginia Medicaid Expansion"
+    with: "Bradley Heim, Ithai Lurie, and Shanthi Ramnath"
+    status: "Under review"
+    date: "2025"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4628534"
+    free: {label: "SSRN 4628534", url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4628534"}
+    topics: [social]
+
+  - title: "The Elasticity of Corporate Taxable Income Across Countries"
+    with: "Claudio Agostini, Katarzyna Bilicka, and Nathan Seegert"
+    status: "NBER Working Paper w34945"
+    date: "2025"
+    url: "https://www.nber.org/papers/w34945"
+    also:
+      - {label: "Brookings brief", title: "Corporate tax responsiveness varies across countries", url: "https://www.brookings.edu/articles/corporate-tax-responsiveness-varies-across-countries-and-that-heterogeneity-matters-for-global-coordination/"}
+    topics: [tax]
+
+  - title: "Measuring Housing Underproduction: Why Estimates Diverge and What a National Number Can Say"
+    status: "Prepared for the Federal Reserve Bank of Boston conference “Residential Realities: Understanding Challenges and Considering Solutions in the U.S. Housing Market,” November 2026"
+    date: "2026-11"
+    url: "https://www.bostonfed.org/-/media/Documents/events/2026/econ-conference/measuring_housing_under_production_patel_111326.pdf"
+    also:
+      - {label: "Conference page", url: "https://www.bostonfed.org/news-and-events/events/economic-research-conference-series/understanding-challenges-solutions-in-us-housing-market.aspx"}
+    topics: [housing]
+
+  - title: "Board Gender Diversity and Workforce Composition, Compensation, and Retention for U.S. Publicly Traded Companies"
+    with: "Tanya Byker, Sara Malik, and Jason Sandvik"
+    status: "Under review"
+    date: "2025"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5363846"
+    topics: [governance]
+
+  - title: "Health and Labor Impacts of Mining: Evidence from South Africa"
+    with: "Julia Berazneva and Tanya Byker"
+    status: "Draft available upon request"
+    date: "2025"
+    url: ""
+    topics: [social]
+
+  - title: "At a Loss: The Real and Reporting Elasticity of Taxable Income"
+    with: "Nathan Seegert and Matthew Smith"
+    status: "Working paper"
+    date: "2023"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2608166"
+    topics: [tax]
+
+  - title: "Inducing Labor: The Impact of Health Insurance on Post-Natal Labor Supply"
+    with: "Ithai Lurie and Shanthi Ramnath"
+    status: "Working paper"
+    date: "2023"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3882237"
+    topics: [social]
+
+  - title: "Production Factors, Productivity Dynamics, and Quality Gains as Determinants of Healthcare Spending Growth in US Hospitals"
+    with: "Juan Contreras and Ignez Tristao"
+    status: "Bank of Mexico Working Paper 2013-13"
+    date: "2013"
+    url: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2344549"
+    topics: [governance]
+
+in_progress:
+  - {title: "Evaluating the Effect of the Historic Tax Credit on Property Values and Neighborhoods", with: "Naomi Feldman, Laura Kawano, Nirupama Rao, and Shanthi Ramnath", topics: [housing, tax]}
+  - {title: "Too Small to Fail: Estimating the Effect of Targeted Small Business Tax Policy in the mid-2000s", with: "Rich Prisinzano", topics: [tax]}
+  - {title: "When Single Mothers Return to Work: Evaluating the Long-term Impacts of Welfare Reform on Children's Outcomes", with: "Tanya Byker", topics: [social]}

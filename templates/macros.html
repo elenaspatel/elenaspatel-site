@@ -1,0 +1,46 @@
+{# Shared entry formats. #}
+
+{% macro paper(p, show_type=false) -%}
+<li class="entry">
+  {% if p.url %}<a class="entry-title" href="{{ p.url }}">{{ p.title }}</a>{% else %}<span class="entry-title">{{ p.title }}</span>{% endif %}
+  <p class="meta">{% if p.with %}with {{ p.with }} · {% endif %}{% if p.venue %}<em>{{ p.venue }}</em>{% if p.cite %} {{ p.cite }}{% endif %}{% elif p.status %}{{ p.status }}{% endif %}</p>
+  {% set links = [] %}
+  {% if p.free and p.free.url %}{% set _ = links.append({"label": p.free.label, "url": p.free.url}) %}{% endif %}
+  {% for a in p.also or [] %}{% set _ = links.append(a) %}{% endfor %}
+  {% if links %}<p class="chips">{% for l in links %}<a class="chip" href="{{ l.url }}"{% if l.title %} title="{{ l.title }}"{% endif %}>{{ l.label }}</a>{% endfor %}</p>{% endif %}
+</li>
+{%- endmacro %}
+
+{% macro piece(p) -%}
+<li class="entry">
+  <span class="tag">{{ p.date|nice_date }}{% if p.outlet and p.outlet != "Brookings" %} · {{ p.outlet }}{% endif %}</span>
+  {% if p.url %}<a class="entry-title" href="{{ p.url }}">{{ p.title }}</a>{% else %}<span class="entry-title">{{ p.title }}</span>{% endif %}
+  {% if p.with %}<p class="meta">with {{ p.with }}</p>{% endif %}
+  {% if p.note %}<p class="meta note">{{ p.note }}</p>{% endif %}
+</li>
+{%- endmacro %}
+
+{% macro hit(m) -%}
+<li class="entry compact">
+  <span class="tag">{{ m.outlet }} · {{ m.date|nice_date }}</span>
+  {% if m.url %}<a href="{{ m.url }}">{{ m.title }}</a>{% else %}<span>{{ m.title }}</span>{% endif %}
+</li>
+{%- endmacro %}
+
+{% macro row(r) -%}
+<li class="row" data-topics="{{ (r.topics or [])|join(' ') }}" data-type="{{ r.type }}">
+  <span class="row-type">{{ r.type_label }}</span>
+  <span class="row-body">
+    {% if r.url %}<a class="entry-title" href="{{ r.url }}">{{ r.title }}</a>{% else %}<span class="entry-title">{{ r.title }}</span>{% endif %}
+    <span class="meta">{% if r.with %}with {{ r.with }} · {% endif %}{% if r.venue %}<em>{{ r.venue }}</em>{% if r.cite %} {{ r.cite }}{% endif %}{% elif r.status %}{{ r.status }}{% elif r.outlet %}{{ r.outlet }}{% endif %}</span>
+    {% set links = [] %}
+    {% if r.free and r.free.url %}{% set _ = links.append({"label": r.free.label, "url": r.free.url}) %}{% endif %}
+    {% for a in r.also or [] %}{% set _ = links.append(a) %}{% endfor %}
+    {% if links %}<span class="chips">{% for l in links %}<a class="chip" href="{{ l.url }}"{% if l.title %} title="{{ l.title }}"{% endif %}>{{ l.label }}</a>{% endfor %}</span>{% endif %}
+  </span>
+</li>
+{%- endmacro %}
+
+{% macro email(c) -%}
+<a class="js-email" data-u="{{ c.user }}" data-d="{{ c.domain }}">{{ c.user }} [at] {{ c.domain|replace(".", " [dot] ") }}</a>
+{%- endmacro %}

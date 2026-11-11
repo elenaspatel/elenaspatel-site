@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% from "macros.html" import paper, email %}
+{% block content %}
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">{{ profile.eyebrow }}</p>
+    <h1 class="display">{{ profile.headline }}</h1>
+    <p class="lede">{{ profile.bio }}</p>
+    <p class="chips">{% for l in profile.links %}<a class="chip chip-lg" href="{{ l.url if l.url.startswith('http') else base ~ l.url }}">{{ l.label }}</a>{% endfor %}<a class="chip chip-lg" href="#contact">Contact me</a></p>
+  </div>
+  {% if profile.headshot %}<img class="headshot" src="{{ base }}{{ profile.headshot }}" alt="{{ profile.name }}">{% else %}<div class="headshot placeholder" role="img" aria-label="Headshot to come">Photo</div>{% endif %}
+</section>
+
+<section class="band" aria-labelledby="areas">
+  <h2 id="areas">Research areas</h2>
+  <div class="area-grid">
+    {% for a in areas %}
+    <a class="area" href="{{ base }}research/{{ a.key }}.html">
+      <span class="area-title">{{ a.title }}</span>
+      <span class="area-blurb">{{ a.blurb }}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="band" aria-labelledby="pubs">
+  <div class="band-head"><h2 id="pubs">Recent academic publications</h2><a class="more" href="{{ base }}publications.html">All publications →</a></div>
+  <ol class="entries">{% for p in published %}{{ paper(p) }}{% endfor %}</ol>
+</section>
+
+<section class="band two-col" aria-labelledby="testimony">
+  <div>
+    <h2 id="testimony">Testimony</h2>
+    <ol class="entries">
+      {% for t in testimony %}
+      <li class="entry"><a class="entry-title" href="{{ t.url }}">{{ t.title }}</a><p class="meta">{{ t.body }} · {{ t.date|nice_date }}</p></li>
+      {% endfor %}
+    </ol>
+  </div>
+  <div id="contact">
+    <h2>Contact</h2>
+    <p>I brief congressional offices and agency staff on tax, housing, and postal policy, and I'm glad to talk with reporters and researchers.</p>
+    <p><strong>Email:</strong> {{ email(profile.contact) }}</p>
+  </div>
+</section>
+
+<section class="band two-col" aria-labelledby="background">
+  <div>
+    <h2 id="background">Positions</h2>
+    <ul class="plain">
+      {% for p in profile.positions %}<li><span class="strong">{{ p.org }}</span><br><span class="meta">{{ p.role }} · {{ p.years }}</span></li>{% endfor %}
+    </ul>
+  </div>
+  <div>
+    <h2>Education</h2>
+    <ul class="plain">
+      {% for e in profile.education %}<li><span class="strong">{{ e.degree }}</span><br><span class="meta">{{ e.school }} · {{ e.year }}</span></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+{% endblock %}

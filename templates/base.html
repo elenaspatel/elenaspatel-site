@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ profile.name }}{% endblock %}</title>
+<meta name="description" content="{{ profile.short_bio }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ base }}static/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="brand" href="{{ base }}index.html">{{ profile.name }}</a>
+    <ul class="nav-links">
+      {% set nav = [("research/index.html","Research","research/"),("publications.html","Publications","publications"),("policy.html","Policy &amp; Government","policy"),("media.html","Media","media"),("teaching.html","Teaching","teaching"),("cv.pdf","CV","cv")] %}
+      {% for href, label, match in nav %}
+      <li><a href="{{ base }}{{ href }}"{% if page.startswith(match) %} aria-current="page"{% endif %}>{{ label|safe }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>
+<main id="main" class="wrap">
+{% block content %}{% endblock %}
+</main>
+<footer class="site-footer">
+  <div class="wrap footer">
+    <span>{{ profile.footer_roles|safe }}</span>
+    <span>Last updated {{ updated }}</span>
+  </div>
+</footer>
+<script src="{{ base }}static/site.js"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

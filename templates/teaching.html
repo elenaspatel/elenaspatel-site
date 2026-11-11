@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Teaching · {{ profile.name }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1 class="display">Teaching and advising</h1>
+  <p class="lede">I have taught econometrics and economics at the undergraduate, master's, and doctoral levels, and I advise doctoral students in finance and public policy.</p>
+</section>
+
+<section class="band" aria-labelledby="courses">
+  <h2 id="courses">Courses</h2>
+  <ul class="plain">
+    {% for s in teaching.courses %}<li><span class="strong">{{ s.school }}</span><br><span class="meta">{{ s.courses|join("; ") }}</span></li>{% endfor %}
+  </ul>
+</section>
+
+<section class="band" aria-labelledby="students">
+  <h2 id="students">Doctoral students advised</h2>
+  <ul class="plain">
+    {% for s in teaching.students %}<li>{{ s.name }} <span class="meta">· {{ s.field }}, {{ s.year }}</span></li>{% endfor %}
+  </ul>
+</section>
+{% endblock %}

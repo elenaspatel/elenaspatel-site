@@ -1,0 +1,39 @@
+# Who Elena is: header, home page, footer.
+name: Elena Spatoulas Patel
+eyebrow: Economist · Tax and fiscal policy
+headline: How tax systems, public institutions, and the safety net shape economic behavior.
+bio: >-
+  I am a senior fellow in Economic Studies at the Brookings Institution, co-director of the
+  Urban-Brookings Tax Policy Center, and the Robert E. Pozen Director's Chair. I am also an editor of
+  the National Tax Journal. My research spans
+  tax policy, social insurance and health, housing and infrastructure, the governance of firms and
+  nonprofits, and postal policy. I was previously on the faculty of the University of Utah's David
+  Eccles School of Business, and served at the Council of Economic Advisers and the Treasury's
+  Office of Tax Analysis.
+short_bio: >-
+  Senior fellow in Economic Studies at the Brookings Institution and co-director of the
+  Urban-Brookings Tax Policy Center.
+headshot: "static/headshot.jpg"
+links:
+  - {label: "CV (PDF)", url: "cv.pdf"}
+  - {label: "Google Scholar", url: "https://scholar.google.com/citations?user=lQmbCsUAAAAJ&hl=en"}
+  - {label: "Brookings profile", url: "https://www.brookings.edu/people/elena-spatoulas-patel/"}
+# Email is split so it never appears whole in the page source; static/site.js joins it into a link.
+contact:
+  user: epatel
+  domain: brookings.edu
+footer_roles: "Brookings Institution · Urban-Brookings Tax Policy Center · Editor, <em>National Tax Journal</em>"
+
+positions:
+  - {org: "The Brookings Institution", role: "Senior Fellow, Economic Studies; Co-Director, Urban-Brookings Tax Policy Center; Robert E. Pozen Director's Chair", years: "2025–"}
+  - {org: "National Tax Journal", role: "Editor", years: "2026–"}
+  - {org: "Marriner S. Eccles Institute, University of Utah", role: "Fiscal Policy Impact Scholar", years: "2025–"}
+  - {org: "David Eccles School of Business, University of Utah", role: "Assistant Professor (Sorenson Assistant Professor, 2023–2025)", years: "2018–2025"}
+  - {org: "Council of Economic Advisers", role: "Senior Public Finance Economist", years: "2023–2024"}
+  - {org: "U.S. Department of the Treasury, Office of Tax Analysis", role: "Financial Economist", years: "2012–2018"}
+  - {org: "Postal Regulatory Commission", role: "Economist, Office of Accountability and Compliance", years: "2011–2012"}
+
+education:
+  - {degree: "Ph.D., Economics", school: "University of Michigan", year: "2013"}
+  - {degree: "M.A., Economics", school: "University of Michigan", year: "2008"}
+  - {degree: "B.S., Economics (Honors) and Mathematics; minor in Modern Greek Studies", school: "University of Michigan", year: "2007"}

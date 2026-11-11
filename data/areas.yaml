@@ -1,0 +1,72 @@
+# The five research areas, in display order.
+# key: used in topics: [...] tags across data files and in the page URL (research/<key>.html).
+# intro and findings are DRAFTS for Elena to edit. Findings must come from her published work.
+- key: tax
+  title: Tax policy
+  blurb: "How taxes shape business investment and behavior: corporate and capital taxation, tax enforcement, the 2025 tax law, tariffs, taxing AI"
+  intro: >-
+    Much of my work asks how taxes change what firms and investors actually do: how much they
+    invest, how they organize, and how they report income. My research draws on administrative
+    databases and on my years at the Treasury's Office of Tax Analysis. I also write about the design
+    of the corporate tax, the 2025 tax law, tariffs and executive tax authority, and emerging
+    questions such as how to tax artificial intelligence.
+  findings:
+    - text: "Completing the shift from a corporate income tax to a corporate cash-flow tax, with a border adjustment and a 25 percent rate, would raise over $4.7 trillion over 10 years."
+      url: "https://www.brookings.edu/articles/corporate-tax-reform-in-the-wake-of-the-2025-tax-law-completing-the-shift-to-a-corporate-cash-flow-tax/"
+    - text: "Two investors holding identical index portfolios can end up with different after-tax wealth depending only on whether they hold a mutual fund or an ETF."
+      url: "https://www.brookings.edu/articles/taxing-index-funds-mutual-funds-etfs-and-paths-to-reform/"
+    - text: "Corporate taxable income responds to tax rates very differently across countries, which matters for global tax coordination."
+      url: "https://www.brookings.edu/articles/corporate-tax-responsiveness-varies-across-countries-and-that-heterogeneity-matters-for-global-coordination/"
+
+- key: social
+  title: Social insurance, health, and work
+  blurb: "Paid family and sick leave, Medicaid, labor supply, children's health"
+  intro: >-
+    I study how social insurance programs, including paid family and sick leave, emergency leave
+    during the pandemic, and Medicaid, affect workers' careers, caregiving, and family health. Much
+    of this work links program rules to administrative tax and health claims data to follow people
+    over many years.
+  findings: []
+
+- key: housing
+  title: Housing and infrastructure
+  blurb: "Measuring the housing shortage, construction costs and tariffs, the home-sale capital gains exclusion, prevailing wages and public works"
+  intro: >-
+    How many homes is the country short, who would benefit from proposed tax changes, and what
+    drives the cost of building? My housing work focuses on measurement and on the tax and trade
+    policies that shape housing supply, and extends to the cost of building public infrastructure.
+  findings:
+    - text: "The U.S. was short about 4.9 million housing units at the end of 2023, an estimate cited by Bloomberg, the Congressional Research Service, and CalMatters."
+      url: "https://www.brookings.edu/articles/make-it-count-measuring-our-housing-supply-shortage/"
+    - text: "Rising local rents between 2006 and 2024 are associated with 2.5 to 3.0 million households that did not form."
+      url: "https://www.bostonfed.org/-/media/Documents/events/2026/econ-conference/measuring_housing_under_production_patel_111326.pdf"
+    - text: "About 95 percent of households, and 90 percent of those 65 and older, would owe no federal capital gains tax on a home sale under current law, so expanding the exclusion is unlikely to unlock much housing supply."
+      url: "https://www.brookings.edu/articles/will-expanding-the-capital-gains-exclusion-unlock-housing-supply/"
+
+- key: governance
+  title: Governance of firms and nonprofits
+  blurb: "Nonprofit hospitals and other tax-exempt organizations, hospital market power, corporate boards"
+  intro: >-
+    Who owns an organization, and who oversees it, shapes how it invests and whom it serves. Much of
+    this work focuses on hospitals, and on nonprofit hospitals in particular: tax-exempt organizations
+    that cannot distribute their profits and so operate without the owners who would ordinarily
+    monitor management. I study how those rules, market power, and regulation shape hospitals'
+    investment and spending, and how corporate board composition shapes firms' workforces.
+  findings: []
+
+- key: postal
+  title: Postal policy
+  blurb: "The Postal Service's universal service obligation, finances and governance, mail ballots, rural access"
+  intro: >-
+    The Postal Service is bound by law to deliver to every address at uniform prices, but the
+    letter-mail revenue that paid for that obligation is in long decline. My work examines what the
+    network does for rural communities, small businesses, prescription access, and elections, and
+    what it would take to put universal service on a sustainable footing. I began working on postal
+    economics as an economist at the Postal Regulatory Commission.
+  findings:
+    - text: "In the 2026 primaries in California, North Carolina, and Washington, areas exposed to the Postal Service's network redesign saw late-arrival mail ballot rejections roughly double."
+      url: "https://www.brookings.edu/articles/postal-network-redesign-and-mail-ballot-rejections-in-the-2026-primaries/"
+    - text: "A new postmarking policy could lead to the rejection of an estimated 43,000 to 55,000 additional mail ballots in the November 2026 election."
+      url: "https://www.npr.org/2026/10/09/nx-s1-5984981/mail-in-ballot-usps-postmark"
+    - text: "Slower mail delivery threatens prescription drug access for patients who rely on mail-order pharmacies."
+      url: "https://www.brookings.edu/articles/how-usps-network-changes-threaten-prescription-drug-access-for-vulnerable-populations/"

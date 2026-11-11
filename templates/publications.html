@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% from "macros.html" import row %}
+{% block title %}Publications · {{ profile.name }}{% endblock %}
+{% block content %}
+<section class="page-head">
+  <h1 class="display">Publications</h1>
+  <p class="lede">Journal articles, working papers, policy research, commentary, and testimony in one list. Filter by topic or type; earlier years are folded below.</p>
+</section>
+
+<section class="filters" aria-label="Filter publications" data-filter-for="pub-list" hidden>
+  <div class="filter-row" role="group" aria-label="Topic">
+    <span class="filter-label">Topic</span>
+    <button type="button" class="pill" data-filter="topic" data-value="all" aria-pressed="true">All</button>
+    {% for a in areas %}<button type="button" class="pill" data-filter="topic" data-value="{{ a.key }}" aria-pressed="false">{{ a.title }}</button>{% endfor %}
+  </div>
+  <div class="filter-row" role="group" aria-label="Type">
+    <span class="filter-label">Type</span>
+    {% for v, l in [("all","All"),("article","Journal articles"),("working","Working papers"),("policy","Policy research"),("commentary","Commentary and op-eds"),("testimony","Testimony")] %}
+    <button type="button" class="pill" data-filter="type" data-value="{{ v }}" aria-pressed="{{ 'true' if v == 'all' else 'false' }}">{{ l }}</button>
+    {% endfor %}
+  </div>
+  <p class="count" aria-live="polite"></p>
+</section>
+
+<div id="pub-list" class="filtered">
+  {% for y in recent %}
+  <section class="year" aria-label="{{ y.year }}"><h2 class="year-head">{{ y.year }}</h2><ol class="rows">{% for r in y.rows %}{{ row(r) }}{% endfor %}</ol></section>
+  {% endfor %}
+  {% if older %}
+  <details class="older">
+    <summary>Earlier years</summary>
+    {% for y in older %}
+    <section class="year" aria-label="{{ y.year }}"><h2 class="year-head">{{ y.year }}</h2><ol class="rows">{% for r in y.rows %}{{ row(r) }}{% endfor %}</ol></section>
+    {% endfor %}
+  </details>
+  {% endif %}
+  <p class="empty" hidden>Nothing matches those filters.</p>
+</div>
+
+<section class="band" aria-labelledby="wip">
+  <h2 id="wip">Works in progress</h2>
+  <ul class="plain">{% for w in in_progress %}<li><span class="strong">{{ w.title }}</span><br><span class="meta">with {{ w.with }}</span></li>{% endfor %}</ul>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ base }}static/filter.js"></script>{% endblock %}
