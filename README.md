@@ -43,8 +43,9 @@ Then open http://localhost:8000. `_site/` is generated and not committed.
 
 ## Publishing
 
-The GitHub repo (`elenaspatel/elenaspatel-site`) is **private and not published yet** (Nov 2026: Elena is still workshopping it). The deploy workflow is manual-only until then. To go live: make the repo public (free GitHub Pages needs a public repo) or use a paid plan, turn on Pages with source "GitHub Actions", and restore the `push` trigger in `.github/workflows/deploy.yml`. After that, every push to `main` (Elena uses GitHub Desktop) builds and deploys in about a minute. The custom domain is set by adding a `CNAME` file containing `elenaspatel.com` (build.py copies it) and pointing the domain's DNS at GitHub Pages.
+Live (since Nov 11, 2026) at https://elenaspatel.github.io/elenaspatel-site/ from the public repo `elenaspatel/elenaspatel-site`. Every push to `main` (Elena uses GitHub Desktop) builds and deploys in about a minute. elenaspatel.com still points to the old Google Site until the Namecheap switch below; until then `noindex: true` in profile.yaml keeps the github.io address out of search engines (set it to false at the switch).
 
+Commits in this repo use GitHub's private address (274235979+elenaspatel@users.noreply.github.com, set in the repo's git config) so Elena's personal email never appears in the public history.
 
 ### Domain (Namecheap)
 

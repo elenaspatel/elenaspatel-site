@@ -1,11 +1,9 @@
 # Builds the site with build.py and publishes it to GitHub Pages on every push to main.
 name: Build and deploy site
 
-# Publishing is OFF for now: the site only deploys when run by hand from the Actions tab.
-# When Elena is ready to go live, restore the push trigger below and turn on GitHub Pages.
 on:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
