@@ -45,6 +45,18 @@ Then open http://localhost:8000. `_site/` is generated and not committed.
 
 The GitHub repo (`elenaspatel/elenaspatel-site`) is **private and not published yet** (Nov 2026: Elena is still workshopping it). The deploy workflow is manual-only until then. To go live: make the repo public (free GitHub Pages needs a public repo) or use a paid plan, turn on Pages with source "GitHub Actions", and restore the `push` trigger in `.github/workflows/deploy.yml`. After that, every push to `main` (Elena uses GitHub Desktop) builds and deploys in about a minute. The custom domain is set by adding a `CNAME` file containing `elenaspatel.com` (build.py copies it) and pointing the domain's DNS at GitHub Pages.
 
+
+### Domain (Namecheap)
+
+elenaspatel.com is registered at Namecheap, which also runs its DNS (Namecheap BasicDNS). As of Nov 2026, `www` is a CNAME to `ghs.googlehosted.com` (the old Google Site), and the bare domain uses Namecheap's URL-redirect record (192.64.119.7) to send visitors to `www`. To switch to GitHub Pages, in Namecheap → Domain List → Manage → Advanced DNS:
+
+1. Replace the `www` CNAME with `elenaspatel.github.io`.
+2. Replace the `@` URL-redirect record with four A records: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153.
+3. Add a `CNAME` file containing `www.elenaspatel.com` (or `elenaspatel.com`) to the repo root; build.py copies it into the site.
+4. In the repo's Settings → Pages, enter the custom domain, then tick "Enforce HTTPS" once the certificate is issued. Verifying the domain under GitHub account settings → Pages guards against takeover.
+
+Keep the Google Site untouched until the new site loads at the domain, so nothing goes dark.
+
 ## Open items
 
 - Headshot: add `static/headshot.jpg` and set `headshot:` in profile.yaml.
