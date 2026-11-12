@@ -5,6 +5,7 @@ Usage:  python3 build.py            (writes _site/)
         python3 -m http.server -d _site 8000   (preview at http://localhost:8000)
 """
 import datetime as dt
+import hashlib
 import pathlib
 import shutil
 
@@ -75,6 +76,14 @@ def build():
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=select_autoescape(["html"]))
     env.filters["nice_date"] = nice_date
     env.filters["year"] = year
+
+    def bust(path):
+        """Append a short content hash so browsers fetch a changed file right away instead of a cached copy."""
+        f = ROOT / path
+        if not f.exists():
+            return path
+        return f"{path}?v={hashlib.md5(f.read_bytes()).hexdigest()[:8]}"
+    env.filters["bust"] = bust
     common = dict(profile=profile, areas=areas, area_by_key=area_by_key,
                   updated=f"{MONTHS[dt.date.today().month - 1]} {this_year}")
 

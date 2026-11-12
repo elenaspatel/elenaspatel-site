@@ -42,4 +42,4 @@
   <ul class="plain">{% for w in in_progress %}<li><span class="strong">{{ w.title }}</span><br><span class="meta">with {{ w.with }}</span></li>{% endfor %}</ul>
 </section>
 {% endblock %}
-{% block scripts %}<script src="{{ base }}static/filter.js"></script>{% endblock %}
+{% block scripts %}<script src="{{ base }}{{ 'static/filter.js'|bust }}"></script>{% endblock %}

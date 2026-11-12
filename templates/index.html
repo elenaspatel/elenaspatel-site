@@ -8,7 +8,7 @@
     <p class="lede">{{ profile.bio }}</p>
     <p class="chips">{% for l in profile.links %}<a class="chip chip-lg" href="{{ l.url if l.url.startswith('http') else base ~ l.url }}">{{ l.label }}</a>{% endfor %}<a class="chip chip-lg" href="#contact">Contact me</a></p>
   </div>
-  {% if profile.headshot %}<img class="headshot" src="{{ base }}{{ profile.headshot }}" alt="{{ profile.name }}">{% else %}<div class="headshot placeholder" role="img" aria-label="Headshot to come">Photo</div>{% endif %}
+  {% if profile.headshot %}<img class="headshot" src="{{ base }}{{ profile.headshot|bust }}" alt="{{ profile.name }}">{% else %}<div class="headshot placeholder" role="img" aria-label="Headshot to come">Photo</div>{% endif %}
 </section>
 
 <section class="band" aria-labelledby="areas">
