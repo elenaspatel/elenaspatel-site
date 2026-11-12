@@ -55,8 +55,12 @@ p { margin: 0 0 14px; }
 .more { font-weight: 600; font-size: 15px; }
 .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
 
-.area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 40px; }
-.area { display: block; padding: 18px 0; border-bottom: 1px solid var(--rule-soft); color: inherit; }
+/* Each area spans two rows of a shared grid (subgrid), so titles line up across a row and so do
+   the descriptions under them, even when one title wraps to two lines. */
+.area-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); column-gap: 40px; row-gap: 0; }
+.area { display: grid; grid-row: span 2; grid-template-rows: subgrid; row-gap: 4px; align-content: start; padding: 18px 0; border-bottom: 1px solid var(--rule-soft); color: inherit; }
+.area-title { align-self: start; }
+.area-blurb { align-self: start; }
 .area:hover { text-decoration: none; }
 .area:hover .area-title { text-decoration: underline; text-underline-offset: 3px; }
 .area-title { display: block; font-family: var(--serif); font-size: 21px; color: var(--navy); }
