@@ -1,7 +1,7 @@
 # Who Elena is: header, home page, footer.
 # noindex: true keeps search engines away while the site lives at the github.io preview address.
 # Set to false when elenaspatel.com points here.
-noindex: true
+noindex: false
 name: Elena Spatoulas Patel
 eyebrow: Economist · Tax and fiscal policy
 headline: How tax systems, public institutions, and the safety net shape economic behavior.
