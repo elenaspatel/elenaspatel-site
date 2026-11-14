@@ -43,20 +43,13 @@ Then open http://localhost:8000. `_site/` is generated and not committed.
 
 ## Publishing
 
-Live (since Nov 11, 2026) at https://elenaspatel.github.io/elenaspatel-site/ from the public repo `elenaspatel/elenaspatel-site`. Every push to `main` (Elena uses GitHub Desktop) builds and deploys in about a minute. elenaspatel.com still points to the old Google Site until the Namecheap switch below; until then `noindex: true` in profile.yaml keeps the github.io address out of search engines (set it to false at the switch).
+Live at **https://www.elenaspatel.com** (since Nov 13, 2026) from the public repo `elenaspatel/elenaspatel-site`; the bare elenaspatel.com and the old github.io address redirect there. Every push to `main` (Elena uses GitHub Desktop) builds and deploys in about a minute. Search indexing is on (`noindex: false` in profile.yaml).
 
 Commits in this repo use GitHub's private address (274235979+elenaspatel@users.noreply.github.com, set in the repo's git config) so Elena's personal email never appears in the public history.
 
 ### Domain (Namecheap)
 
-elenaspatel.com is registered at Namecheap, which also runs its DNS (Namecheap BasicDNS). As of Nov 2026, `www` is a CNAME to `ghs.googlehosted.com` (the old Google Site), and the bare domain uses Namecheap's URL-redirect record (192.64.119.7) to send visitors to `www`. To switch to GitHub Pages, in Namecheap → Domain List → Manage → Advanced DNS:
-
-1. Replace the `www` CNAME with `elenaspatel.github.io`.
-2. Replace the `@` URL-redirect record with four A records: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153.
-3. Add a `CNAME` file containing `www.elenaspatel.com` (or `elenaspatel.com`) to the repo root; build.py copies it into the site.
-4. In the repo's Settings → Pages, enter the custom domain, then tick "Enforce HTTPS" once the certificate is issued. Verifying the domain under GitHub account settings → Pages guards against takeover.
-
-Keep the Google Site untouched until the new site loads at the domain, so nothing goes dark.
+elenaspatel.com is registered at Namecheap, which also runs its DNS (BasicDNS). Records (Advanced DNS): `www` CNAME → `elenaspatel.github.io`; four `@` A records → 185.199.108.153 / .109.153 / .110.153 / .111.153. The custom domain is set in the repo's Settings → Pages (`www.elenaspatel.com`, HTTPS enforced). Don't touch the MX/TXT records. To roll back to the old Google Site: point `www` back to `ghs.googlehosted.com`.
 
 ## Open items
 
