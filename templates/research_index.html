@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% from "macros.html" import arrow_title %}
 {% block title %}Research · {{ profile.name }}{% endblock %}
 {% block content %}
 <section class="page-head">
@@ -8,7 +9,7 @@
 <ol class="area-list">
   {% for a in areas %}
   <li>
-    <h2 class="area-head"><a class="area-title" href="{{ a.key }}.html">{{ a.title }}<span class="arrow" aria-hidden="true">→</span></a></h2>
+    <h2 class="area-head"><a class="area-title" href="{{ a.key }}.html">{{ arrow_title(a.title) }}</a></h2>
     <p>{{ a.intro }}</p>
     <p class="area-more"><a href="{{ a.key }}.html">Papers, policy work, and press →</a></p>
   </li>

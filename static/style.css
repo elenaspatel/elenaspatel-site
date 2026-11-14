@@ -62,16 +62,12 @@ p { margin: 0 0 14px; }
 .area-title { align-self: start; }
 .area-blurb { align-self: start; }
 .area:hover { text-decoration: none; }
-.area:hover .area-title { text-decoration: underline; text-underline-offset: 3px; }
 .area-title { display: block; font-family: var(--serif); font-size: 21px; color: var(--navy); }
 .area-blurb { display: block; font-size: 15px; color: var(--muted); }
 .area-list { list-style: none; margin: 0; padding: 0 0 48px; }
 .area-list li { border-top: 1px solid var(--rule); padding: 28px 0; }
 .area-list .area-head { font-size: inherit; margin: 0 0 8px; }
-.area-list .area-title { font-size: 24px; text-decoration: underline; text-decoration-color: var(--chip-border); text-decoration-thickness: 1px; text-underline-offset: 5px; }
-.area-list .area-title:hover { text-decoration-color: var(--navy); }
-.area-list .arrow { display: inline-block; margin-left: .35em; transition: transform .15s ease; }
-.area-list .area-title:hover .arrow { transform: translateX(3px); }
+.area-list .area-title { font-size: 24px; }
 .area-list p { color: var(--body); max-width: 760px; margin: 0; }
 .area-list .area-more { margin-top: 10px; font-size: 15px; font-weight: 600; }
 
@@ -103,6 +99,23 @@ span.entry-title { color: var(--ink); }
 .pair { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 48px; padding-bottom: 48px; }
 .trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px; border-top: 1px solid var(--rule); padding: 40px 0 48px; }
 .trio h2 { font-size: 22px; }
+
+/* Link system (one rule everywhere):
+   - Section links (research areas on Home and Research): navy serif title, faint underline, arrow.
+   - Links inside running text (key findings, intros, breadcrumbs, contact, selected coverage): faint underline.
+   - Item titles in lists (papers, policy pieces, press): navy serif, underline on hover.
+   - Onward links ("All publications →", "Read more →"): bold navy with an arrow.
+   - Buttons (chips, filters): bordered. Navigation (top menu, home buttons) uses Title Case; everything else sentence case. */
+.area-title, .area-list .area-title { text-decoration: underline; text-decoration-color: var(--chip-border); text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.area:hover .area-title, .area-list .area-title:hover { text-decoration-color: var(--navy); }
+.arrow { display: inline-block; margin-left: .35em; transition: transform .15s ease; }
+.area:hover .arrow, .area-title:hover .arrow { transform: translateX(3px); }
+.lede a, .findings li a, .crumb a, #contact a, .band p a:not(.chip):not(.more), .selected a, .area-more a {
+  text-decoration: underline; text-decoration-color: var(--chip-border); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.lede a:hover, .findings li a:hover, .crumb a:hover, #contact a:hover, .band p a:not(.chip):not(.more):hover, .selected a:hover, .area-more a:hover { text-decoration-color: var(--navy); }
+.findings .read-more { font-weight: 600; white-space: nowrap; }
+.nowrap { white-space: nowrap; }
+.area-more a { text-decoration: none; }
 
 /* Filtered lists */
 .filters { border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); padding: 16px 0 4px; display: flex; flex-direction: column; gap: 12px; }

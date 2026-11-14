@@ -31,6 +31,7 @@ Dates are `YYYY-MM-DD`, `YYYY-MM`, or `YYYY`. Lists sort newest first automatica
 - Group roundups (Around the Halls, Please Discuss, expert panels) stay off the site, same as the CV.
 - Key findings must come from Elena's published work. No invented numbers.
 - NTJ title is "Editor".
+- Style consistency (Nov 2026): navigation (top menu, home page buttons: CV / Brookings Profile / Google Scholar / Contact) uses Title Case; everything else (headings, tags, filters, small link buttons) uses sentence case. Links follow one system, documented at the "Link system" comment in static/style.css: section links get a faint underline plus arrow (use the `arrow_title` macro so the arrow never wraps alone), links in running text get a faint underline, list item titles are navy serif, onward links are bold with →.
 
 ## Build and preview locally
 

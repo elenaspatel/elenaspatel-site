@@ -14,7 +14,7 @@
 {% if area.findings %}
 <section class="findings" aria-labelledby="findings">
   <h2 id="findings">Key findings</h2>
-  <ul>{% for f in area.findings %}<li>{{ f.text }} {% if f.url %}<a href="{{ f.url }}">Read more</a>{% endif %}</li>{% endfor %}</ul>
+  <ul>{% for f in area.findings %}<li>{{ f.text }} {% if f.url %}<a class="read-more" href="{{ f.url }}">Read more →</a>{% endif %}</li>{% endfor %}</ul>
 </section>
 {% endif %}
 

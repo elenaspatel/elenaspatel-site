@@ -44,3 +44,9 @@
 {% macro email(c) -%}
 <a class="js-email" data-u="{{ c.user }}" data-d="{{ c.domain }}">{{ c.user }} [at] {{ c.domain|replace(".", " [dot] ") }}</a>
 {%- endmacro %}
+
+{% macro arrow_title(t) -%}
+{%- set parts = t.rsplit(" ", 1) -%}
+{%- if parts|length == 2 %}{{ parts[0] }} {% endif -%}
+<span class="nowrap">{{ parts[-1] }}<span class="arrow" aria-hidden="true">→</span></span>
+{%- endmacro %}

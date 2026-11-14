@@ -18,8 +18,8 @@ short_bio: >-
   Urban-Brookings Tax Policy Center.
 headshot: "static/headshot.jpg"
 links:
-  - {label: "CV (PDF)", url: "cv.pdf"}
-  - {label: "Brookings profile", url: "https://www.brookings.edu/people/elena-spatoulas-patel/"}
+  - {label: "CV", url: "cv.pdf"}
+  - {label: "Brookings Profile", url: "https://www.brookings.edu/people/elena-spatoulas-patel/"}
   - {label: "Google Scholar", url: "https://scholar.google.com/citations?user=lQmbCsUAAAAJ&hl=en"}
 # Email is split so it never appears whole in the page source; static/site.js joins it into a link.
 contact:
