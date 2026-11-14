@@ -8,8 +8,9 @@
 <ol class="area-list">
   {% for a in areas %}
   <li>
-    <a class="area-title" href="{{ a.key }}.html">{{ a.title }}</a>
+    <h2 class="area-head"><a class="area-title" href="{{ a.key }}.html">{{ a.title }}<span class="arrow" aria-hidden="true">→</span></a></h2>
     <p>{{ a.intro }}</p>
+    <p class="area-more"><a href="{{ a.key }}.html">Papers, policy work, and press →</a></p>
   </li>
   {% endfor %}
 </ol>
